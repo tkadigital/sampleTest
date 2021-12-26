@@ -24,8 +24,9 @@ public class OrangeHRMLogo {
       boolean status = driver.findElement(By.xpath("//*[@id=\"divLogo\"]/img")).isDisplayed();
         Assert.assertEquals(true, status);
     }
-   /* @And("Close chrome browser")
-    public void close_chrome_browser() {
-        driver.quit();*/
+   @And("Close chrome browser")
+    public void close_chrome_browser() throws InterruptedException {
+        Thread.sleep(4000);
+        driver.quit();
     }
 }
