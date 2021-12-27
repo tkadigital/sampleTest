@@ -12,7 +12,7 @@ public class OrangeHRMLogo {
 
     @Given("I launch chrome browser")
     public void i_launch_chrome_browser() {
-        System.setProperty("webdriver.chrome.driver", "D://chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
         driver=new ChromeDriver();
     }
     @When("I open OrangeHRM home Page")
