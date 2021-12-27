@@ -24,7 +24,13 @@ public class OrangeHRMLogo {
       boolean status = driver.findElement(By.xpath("//*[@id=\"divLogo\"]/img")).isDisplayed();
         Assert.assertEquals(true, status);
     }
-   @And("Close chrome browser")
+    @Then("I Verify logoin name & password on page")
+    public void i_verify_logoin_name_password_on_page() {
+       driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+       driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+       driver.findElement(By.id("btnLogin")).click();
+    }
+    @And("Close chrome browser")
     public void close_chrome_browser() throws InterruptedException {
         Thread.sleep(4000);
         driver.quit();
